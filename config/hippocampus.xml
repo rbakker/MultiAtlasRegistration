@@ -1,0 +1,15 @@
+<config>
+  <RegisterAtlases>
+    <mnit1>../mni2mm/MNI152_T1_2mm.nii.gz</mnit1>
+    <mnimask>../mni2mm/MNI152_T1_2mm_brain_mask_filled.nii.gz</mnimask>
+  </RegisterAtlases>
+  <PreProcess>
+    <RescaleRetype>
+      <mean>350</mean>
+      <std>300</std>
+    </RescaleRetype>
+  </PreProcess>
+  <Elastix>
+    <numThreads>1</numThreads>
+  </Elastix>
+</config>
