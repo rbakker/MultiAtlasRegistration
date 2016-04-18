@@ -10,7 +10,7 @@ The pipeline takes as input a folder that contains one or more target MRI scans 
 The output of the pipeline is a set of probabilistic atlases, one for each labelled region. They can be thresholded to generate segmented regions, or they can be used as input to further processing steps that use additional constraints to improve the segmentation.
 
 Example:
-First go to the folder ./MultiAtlasRegistration/main)
+First go to the folder ./MultiAtlasRegistration/main
 Then invoke the pipeline by:
 python registeratlases.py -config ../config/hippocampus.xml -atlasdir="/path/to/my/atlasdir" -paramfiles='["../config/Par0000affine.txt"]' -scandir="/path/to/my/scandir"
 

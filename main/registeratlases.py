@@ -243,6 +243,7 @@ class RegisterAtlases(FancyTask):
     }
   )
   
+  # if the target image is among the training scans, then leave it out of the training scans
   def atlasesWithoutTarget(self,targetImage,atlasImages,atlasLabels,atlasHeadmasks=None,atlasBrainmasks=None):
     try:
       i = atlasImages.index(targetImage)
@@ -294,8 +295,6 @@ class RegisterAtlases(FancyTask):
     tpfiles = []
     volumesMean_pre = []
     volumesMedian_pre = []
-    print('atlasImages is {}'.format(atlasImages))
-    print('atlasImages is {}'.format(atlasLabels))
     for i,img in enumerate(targetImages):
       atlasImages_i,atlasLabels_i,atlasHeadmasks_i,atlasBrainmasks_i = \
         self.atlasesWithoutTarget(img,atlasImages,atlasLabels,atlasHeadmasks,atlasBrainmasks)
